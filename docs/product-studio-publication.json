@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "purpose": "product-studio-demo-publication",
-  "source_commit": "123adef9b7965025e30223f1d97f686095fae1fb",
+  "source_commit": "640fedf97860a2d4d0d6ca0c98e1d8aa7f141a9c",
   "source_repository": "frank-vcorp/systronia-application-engine-product",
-  "published_at": "2026-11-02T23:07:55.120Z",
+  "published_at": "2026-11-02T23:26:14.633Z",
   "asset_paths": [
     "docs/index.html",
     "docs/style.css",
