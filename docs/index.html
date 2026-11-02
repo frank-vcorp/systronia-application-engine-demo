@@ -1,1 +1,57 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product Studio · Demo pendiente</title></head><body style="font:16px system-ui;max-width:700px;margin:5rem auto;padding:1rem"><h1>Prototipo en preparación</h1><p>Este sitio contiene exclusivamente demostraciones con datos ficticios. Todavía no se ha aprobado una demo.</p></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qualitra • Constructor de procesos · UX-003</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="shell">
+<aside class="side">
+<div class="logo">Q<span class="logosub">ualitra</span></div>
+<button data-tab="editor" class="active" aria-label="Diseñar proceso"><b>◇</b><span>Diseñar proceso</span></button>
+<button data-tab="simulation" aria-label="Probar proceso"><b>▷</b><span>Probar flujo</span></button>
+<button data-tab="review" aria-label="Revisar requisitos"><b>✓</b><span>Revisión</span></button>
+<div class="foot">SyStudio · UX-003<br>Prototipo Híbrido<br>Sin conexión a sistemas productivos ni datos reales.</div>
+</aside>
+<main class="main">
+<div class="top"><div><div class="crumb">Qualitra / Procesos / Prototipo UX-003</div><h1>Constructor de procesos <span class="chip" id="save-status">Borrador de demostración</span></h1></div>
+<div class="tools"><button class="btn" id="sample">Cargar ejemplo</button><button class="btn" id="save">Guardar borrador</button><button class="btn primary" id="test">Probar flujo</button><button class="btn" id="publish">Simular publicación</button></div>
+</div>
+<div class="workspace">
+<div class="notice">DEMO DE REVISIÓN · Datos completamente ficticios. No hay servidor, usuarios reales, firmas electrónicas ni publicación. Todas las acciones permanecen en esta vista.</div>
+<section id="editor">
+<div class="cols">
+<div class="panel"><header><h2>Biblioteca de elementos</h2><p class="subtitle">Arrastra o haz clic para agregar al flujo</p></header><div class="catalog" id="catalog"></div></div>
+<div class="panel"><div class="editortop"><div><h2>Flujo: incorporación y lectura</h2><div class="mini" id="step-count">0 pasos</div></div><div class="seg"><button class="active" data-view="steps">Pasos guiados</button><button data-view="diagram">Diagrama</button></div></div>
+<div class="flow steps" id="flow" aria-label="Pasos del proceso"></div>
+</div>
+<div class="panel inspector-panel"><header><h2>Configurar paso</h2><p class="subtitle">Selecciona un bloque para editarlo</p></header><div class="inspector" id="inspector"></div></div>
+</div>
+</section>
+<section id="simulation" class="hide">
+<div class="review">
+<div class="panel" style="padding:18px"><h2>Simular recorrido entre roles</h2><p class="subtitle">Expediente ficticio EXP-DEMO-001. Ninguna acción modifica registros reales.</p>
+<div class="callout"><strong>Paso activo:</strong> <span id="sim-step"></span><div class="route" id="sim-route"></div></div>
+<div class="sectiontitle">¿Quién está utilizando el portal?</div><div class="simrow" id="roles"></div>
+<div class="simrow"><button class="btn primary" id="advance">Completar actividad</button><button class="btn warn" id="return" style="display:none">Devolver para corrección</button><button class="btn" id="restart">Reiniciar prueba</button></div>
+<div id="sim-feedback" class="status"></div>
+<p class="mini">Cambiar de rol sólo simula una sesión. No demuestra autorización real de backend.</p></div>
+<div class="panel" style="padding:18px"><h2>Historial del expediente</h2><p class="subtitle">Eventos simulados del mismo registro en todos los pasos</p><ol class="log" id="history"></ol></div>
+</div>
+</section>
+<section id="review" class="hide">
+<div class="review">
+<div class="panel"><h2>Revisión antes de publicar</h2><p>El motor real debería comprobar referencias, roles, rutas, versiones y permisos. En esta demo sólo se realizan validaciones locales.</p><ul id="checks"></ul><button class="btn" id="check">Volver a validar</button></div>
+<div class="panel"><h2>Decisiones pendientes · UX-003</h2><p>La modalidad <b>híbrida</b> fue elegida para prototipar, no como aprobación final. Debemos validar si los pasos guiados y el diagrama son comprensibles para administradores.</p><div class="callout">RF-013 a RF-020 · FL-002 · AC-008 a AC-016<br>Repositorio privado de SyStudio. Revisión humana pendiente.</div><button class="btn" id="back-editor">Volver al editor</button></div>
+</div>
+</section>
+</div>
+</main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script defer src="./model.js"></script>
+<script defer src="./app.js"></script>
+</body>
+</html>
